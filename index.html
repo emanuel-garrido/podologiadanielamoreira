@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2Q7ZH4G');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podología Daniela Moreira - San Nicolás</title>
+    
+    <meta name="description" content="Tratamiento de podología profesional en San Nicolás. Tec. Podóloga Daniela Moreira. Experta en salud y confort de pies. Pedí tu turno.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="Imagenes/Logo Pestaña.jpg" type="image/jpeg">
+
+        <style>
+        /* Evitar scroll horizontal y avatar adaptable */
+        html, body {
+            overflow-x: hidden; /* evita scroll lateral en dispositivos pequeños */
+        }
+        .avatar {
+            width: clamp(120px, 36vw, 320px);
+            height: clamp(120px, 36vw, 320px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            overflow: hidden;
+            background: #ffffff;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* Fuente y color base */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            background: linear-gradient(135deg, #fdf6f9 0%, #f1f5f9 100%);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        header {
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        body.scrolled header {
+            background-color: rgba(255,255,255,0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 6px 24px 0 rgb(236 72 153 / 0.08), 0 1.5px 6px 0 rgb(0 0 0 / 0.06);
+        }
+        /* Mejoras visuales generales */
+        h1, h2, h3, h4 {
+            letter-spacing: -0.5px;
+        }
+        section {
+            border-radius: 1.25rem;
+        }
+        /* Botones */
+        a, button {
+            outline: none;
+        }
+        a:focus, button:focus {
+            box-shadow: 0 0 0 3px #f9a8d4;
+        }
+        /* Modal animación */
+        #imageModal {
+            transition: opacity 0.3s;
+        }
+        #imageModal:not(.hidden) {
+            opacity: 1;
+        }
+        #imageModal.hidden {
+            opacity: 0;
+        }
+        /* Sombra para tarjetas */
+        .shadow-xl, .shadow-2xl {
+            box-shadow: 0 8px 32px 0 rgb(236 72 153 / 0.10), 0 1.5px 6px 0 rgb(0 0 0 / 0.06);
+        }
+        /* Mejoras para imágenes de galería */
+        .galeria-img {
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px 0 rgb(236 72 153 / 0.10);
+        }
+        /* Mejoras para el footer */
+        footer {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            animation: pulse-whatsapp 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 25px rgba(37, 211, 102, 0.6);
+        }
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        /* Animación para imágenes de trabajo */
+        .trabajo-img-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+        .trabajo-img-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(219, 39, 119, 0.3));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+        .trabajo-img-container:hover::before {
+            opacity: 1;
+        }
+        .trabajo-img-container::after {
+            content: '🔍';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 3rem;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+        .trabajo-img-container:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .trabajo-img {
+            transition: transform 0.5s ease;
+        }
+        .trabajo-img-container:hover .trabajo-img {
+            transform: scale(1.15);
+        }
+        /* Modal para imágenes de trabajo */
+        #trabajoModal {
+            transition: opacity 0.3s ease;
+        }
+        #trabajoModal.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2Q7ZH4G"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 md:px-6 py-4">
+            
+            <div class="flex justify-between items-center">
+                
+                <a href="#" class="flex items-center space-x-3 text-xl md:text-2xl font-bold text-pink-600">
+                    <img src="Imagenes/Logo.png" alt="Logo Podología Daniela Moreira" class="h-14">
+                    <span>Podología Daniela Moreira</span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#tratamiento" class="text-slate-600 hover:text-pink-600 transition-all duration-300 font-medium">Tratamientos</a>
+                    <a href="#resultados" class="text-slate-600 hover:text-pink-600 transition-all duration-300 font-medium">Resultados</a>
+                    <a href="#faq" class="text-slate-600 hover:text-pink-600 transition-all duration-300 font-medium">Preguntas Frecuentes</a>
+                    <a href="#sobre-mi" class="text-slate-600 hover:text-pink-600 transition-all duration-300 font-medium">Sobre Mí</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    
+                    <a href="https://wa.me/5493364343460?text=Hola%20Daniela%2C%20te%20contacto%20desde%20tu%20p%C3%A1gina%20web.%20Me%20gustar%C3%ADa%20consultar%20por%20un%20turno%20para%20podolog%C3%ADa." class="hidden sm:flex items-center bg-green-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-green-600 transition-all duration-300 shadow-md" >
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.11 4.9C17.22 3 14.71 2 12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.45 1.27 4.96L2 22l5.05-1.34c1.47.75 3.09 1.2 4.8 1.2h.01c5.52 0 10-4.48 10-10c0-2.71-1-5.22-2.9-7.1zM12 20.38c-1.6 0-3.13-.5-4.42-1.39L4.44 20l1.03-3.08c-.88-1.3-1.38-2.83-1.38-4.42c0-4.41 3.59-8 8-8c2.21 0 4.21.87 5.66 2.34c1.45 1.45 2.34 3.45 2.34 5.66c0 4.41-3.59 8-8 8zm4.4-6.03c-.26-.13-1.56-.77-1.81-.85c-.25-.08-.43-.13-.62.13c-.19.26-.7.85-.86 1.02c-.16.17-.32.19-.58.06c-.26-.13-1.1-.4-2.09-1.28c-.78-.69-1.3-1.54-1.45-1.8c-.15-.26-.02-.4.11-.53c.12-.12.26-.32.39-.47c.13-.16.17-.26.26-.44c.09-.18.04-.33-.02-.46c-.06-.13-.62-1.49-.85-2.04c-.23-.55-.46-.48-.62-.48h-.4c-.19 0-.49.06-.74.32c-.25.26-.96.93-.96 2.25c0 1.32.99 2.6 1.13 2.78c.14.18 1.96 3 4.75 4.18c.71.3 1.25.48 1.69.62c.7.22 1.35.19 1.86.11c.56-.08 1.56-.64 1.78-1.25c.22-.61.22-1.14.16-1.25c-.06-.11-.24-.17-.5-.3z"/>
+                        </svg>
+                        <span>Pedir Turno por WhatsApp</span>
+                    </a>
+                    
+                    <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 text-slate-600 hover:text-pink-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 rounded-2xl bg-white/95 backdrop-blur-sm shadow-lg border border-slate-200 overflow-hidden transform origin-top transition-all duration-300 ease-out">
+                <div class="p-4 space-y-3">
+                    <a href="#tratamiento" class="block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-pink-50 hover:text-pink-600 active:bg-pink-100 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                        El Tratamiento
+                    </a>
+                    <a href="#resultados" class="block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-pink-50 hover:text-pink-600 active:bg-pink-100 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        Resultados
+                    </a>
+                    <a href="#faq" class="block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-pink-50 hover:text-pink-600 active:bg-pink-100 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        Preguntas Frecuentes
+                    </a>
+                    <a href="#sobre-mi" class="block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-pink-50 hover:text-pink-600 active:bg-pink-100 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                        Sobre Mí
+                    </a>
+                    <a href="https://wa.me/5493364343460?text=Hola%20Daniela%2C%20te%20contacto%20desde%20tu%20p%C3%A1gina%20web.%20Me%20gustar%C3%ADa%20consultar%20por%20un%20turno%20para%20podolog%C3%ADa." 
+                       class="flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-md hover:shadow-green-500/25 mt-4">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.11 4.9C17.22 3 14.71 2 12 2 6.48 2 2 6.48 2 12c0 1.77.46 3.45 1.27 4.96L2 22l5.05-1.34c1.47.75 3.09 1.2 4.8 1.2h.01c5.52 0 10-4.48 10-10 0-2.71-1-5.22-2.9-7.1zM12 20.38c-1.6 0-3.13-.5-4.42-1.39L4.44 20l1.03-3.08c-.88-1.3-1.38-2.83-1.38-4.42 0-4.41 3.59-8 8-8 2.21 0 4.21.87 5.66 2.34 1.45 1.45 2.34 3.45 2.34 5.66 0 4.41-3.59 8-8 8zm4.4-6.03c-.26-.13-1.56-.77-1.81-.85-.25-.08-.43-.13-.62.13-.19.26-.7.85-.86 1.02-.16.17-.32.19-.58.06-.26-.13-1.1-.4-2.09-1.28-.78-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.32.39-.47.13-.16.17-.26.26-.44.09-.18.04-.33-.02-.46-.06-.13-.62-1.49-.85-2.04-.23-.55-.46-.48-.62-.48h-.4c-.19 0-.49.06-.74.32-.25.26-.96.93-.96 2.25 0 1.32.99 2.6 1.13 2.78.14.18 1.96 3 4.75 4.18.71.3 1.25.48 1.69.62.7.22 1.35.19 1.86.11.56-.08 1.56-.64 1.78-1.25.22-.61.22-1.14.16-1.25-.06-.11-.24-.17-.5-.3z"/>
+                        </svg>
+                        Pedir Turno por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <main class="container mx-auto px-4 md:px-6 py-12 md:py-16 max-w-7xl">
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center lg:items-start bg-white/80 shadow-xl p-8 md:p-12 mb-12" id="reservar">
+            
+                <div class="max-w-lg mx-auto flex justify-center">
+                    <!-- Avatar responsivo: más pequeño en móviles, crece en pantallas más grandes. Centrado y con object-center. -->
+                    <div class="avatar rounded-full overflow-hidden border-4 border-pink-600 shadow-xl shadow-pink-500/20 transition-shadow duration-300 flex items-center justify-center bg-white md:hover:scale-105 transform-gpu transition-transform">
+                        <img src="Imagenes/Foto Perfil.png" alt="Daniela Moreira, podóloga, atendiendo a un paciente" class="w-full h-full object-cover object-center block" onerror="this.onerror=null; this.src='https://placehold.co/400x400/FCE7F3/be185d?text=Imagen+Profesional';">
+                    </div>
+                </div>
+                <div>
+                <div class="text-sm font-medium text-pink-600 uppercase tracking-wider">
+                    Tec. Podóloga M.P 172492
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 my-3">
+                    Podología Profesional
+                </h1>
+
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Un procedimiento integral enfocado en el estudio, diagnóstico, tratamiento de enfermedades y condiciones de los pies. Devolviéndoles salud y confort.
+                </p>
+
+                <a href="https://wa.me/5493364343460?text=Hola%20Daniela%2C%20te%20contacto%20desde%20tu%20p%C3%A1gina%20web.%20Me%20gustar%C3%ADa%20consultar%20por%20un%20turno%20para%20podolog%C3%ADa." class="w-full flex items-center justify-center bg-green-500 text-white text-base md:text-lg font-semibold py-3 md:py-4 px-6 md:px-8 rounded-full hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-green-300 focus:outline-none focus:ring-4 focus:ring-green-300">
+                    <svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19.11 4.9C17.22 3 14.71 2 12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.45 1.27 4.96L2 22l5.05-1.34c1.47.75 3.09 1.2 4.8 1.2h.01c5.52 0 10-4.48 10-10c0-2.71-1-5.22-2.9-7.1zM12 20.38c-1.6 0-3.13-.5-4.42-1.39L4.44 20l1.03-3.08c-.88-1.3-1.38-2.83-1.38-4.42c0-4.41 3.59-8 8-8c2.21 0 4.21.87 5.66 2.34c1.45 1.45 2.34 3.45 2.34 5.66c0 4.41-3.59 8-8 8zm4.4-6.03c-.26-.13-1.56-.77-1.81-.85c-.25-.08-.43-.13-.62.13c-.19.26-.7.85-.86 1.02c-.16.17-.32.19-.58.06c-.26-.13-1.1-.4-2.09-1.28c-.78-.69-1.3-1.54-1.45-1.8c-.15-.26-.02-.4.11-.53c.12-.12.26-.32.39-.47c.13-.16.17-.26.26-.44c.09-.18.04-.33-.02-.46c-.06-.13-.62-1.49-.85-2.04c-.23-.55-.46-.48-.62-.48h-.4c-.19 0-.49.06-.74.32c-.25.26-.96.93-.96 2.25c0 1.32.99 2.6 1.13 2.78c.14.18 1.96 3 4.75 4.18c.71.3 1.25.48 1.69.62c.7.22 1.35.19 1.86.11c.56-.08 1.56-.64 1.78-1.25c.22-.61.22-1.14.16-1.25c-.06-.11-.24-.17-.5-.3z"/>
+                    </svg>
+                    <span class="text-sm md:text-base lg:text-lg">Pedir Turno por WhatsApp</span>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="mt-16 lg:mt-24 bg-white/80 shadow-xl p-8 md:p-12" id="resultados">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">
+                Resultados Reales (Antes y Después)
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-6">
+                
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col transform hover:scale-[1.02] transition-all duration-300">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-1 p-3">
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 1.png', 'Imagenes/Despues 1.png', 'Onicomicosis (hongo)')">
+                                    <img src="Imagenes/Antes 1.png" alt="Antes del tratamiento de Onicomicosis (hongo)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/F3F4F6/9CA3AF?text=Antes'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">ANTES</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 1.png', 'Imagenes/Despues 1.png', 'Onicomicosis (hongo)')">
+                                    <img src="Imagenes/Despues 1.png" alt="Después del tratamiento de Onicomicosis (hongo)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/FCE7F3/BE185D?text=Después'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-600/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">DESPUÉS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gradient-to-b from-white to-slate-50">
+                        <p class="text-sm font-medium text-slate-700 text-center">Onicomicosis (hongo)</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col transform hover:scale-[1.02] transition-all duration-300">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-1 p-3">
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 2.png', 'Imagenes/Despues 2.png', 'Onicomicosis (hongo)')">
+                                    <img src="Imagenes/Antes 2.png" alt="Antes del tratamiento de Onicomicosis (hongo)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/F3F4F6/9CA3AF?text=Antes'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">ANTES</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 2.png', 'Imagenes/Despues 2.png', 'Onicomicosis (hongo)')">
+                                    <img src="Imagenes/Despues 2.png" alt="Después del tratamiento de Onicomicosis (hongo)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/FCE7F3/BE185D?text=Después'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-600/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">DESPUÉS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gradient-to-b from-white to-slate-50">
+                        <p class="text-sm font-medium text-slate-700 text-center">Onicomicosis (hongo)</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col transform hover:scale-[1.02] transition-all duration-300">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-1 p-3">
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 4.png', 'Imagenes/Despues 4.png', 'Onicocriptosis (uña encarnada)')">
+                                    <img src="Imagenes/Antes 4.png" alt="Antes del tratamiento de Onicocriptosis (uña encarnada)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/F3F4F6/9CA3AF?text=Antes'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">ANTES</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 4.png', 'Imagenes/Despues 4.png', 'Onicocriptosis (uña encarnada)')">
+                                    <img src="Imagenes/Despues 4.png" alt="Después del tratamiento de Onicocriptosis (uña encarnada)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/FCE7F3/BE185D?text=Después'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-600/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">DESPUÉS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gradient-to-b from-white to-slate-50">
+                        <p class="text-sm font-medium text-slate-700 text-center">Onicocriptosis (uña encarnada)</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col transform hover:scale-[1.02] transition-all duration-300">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-1 p-3">
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 3.png', 'Imagenes/Despues 3.png', 'Hiperqueratosis')">
+                                    <img src="Imagenes/Antes 3.png" alt="Antes del tratamiento de Hiperqueratosis" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/F3F4F6/9CA3AF?text=Antes'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">ANTES</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 3.png', 'Imagenes/Despues 3.png', 'Hiperqueratosis')">
+                                    <img src="Imagenes/Despues 3.png" alt="Después del tratamiento de Hiperqueratosis" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/FCE7F3/BE185D?text=Después'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-600/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">DESPUÉS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gradient-to-b from-white to-slate-50">
+                        <p class="text-sm font-medium text-slate-700 text-center">Hiperqueratosis</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col transform hover:scale-[1.02] transition-all duration-300">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-1 p-3">
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 6.png', 'Imagenes/Despues 6.png', 'Talones agrietados')">
+                                    <img src="Imagenes/Antes 6.png" alt="Antes del tratamiento de Talones agrietados" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/F3F4F6/9CA3AF?text=Antes'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">ANTES</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 5 (2).png', 'Imagenes/Despues 5 (2).png', 'Talones agrietados')">
+                                    <img src="Imagenes/Despues 6.png" alt="Después del tratamiento de Talones agrietados" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/FCE7F3/BE185D?text=Después'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-600/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">DESPUÉS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gradient-to-b from-white to-slate-50">
+                        <p class="text-sm font-medium text-slate-700 text-center">Talones agrietados</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col transform hover:scale-[1.02] transition-all duration-300">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-1 p-3">
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 7.png', 'Imagenes/Despues 7.png', 'Callos')">
+                                    <img src="Imagenes/Antes 7.png" alt="Antes del tratamiento de Callos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/F3F4F6/9CA3AF?text=Antes'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">ANTES</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden shadow-sm">
+                                <div class="aspect-[4/5] overflow-hidden bg-slate-100 cursor-pointer group" onclick="openModal('Imagenes/Antes 7.png', 'Imagenes/Despues 7.png', 'Callos')">
+                                    <img src="Imagenes/Despues 7.png" alt="Después del tratamiento de Callos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/FCE7F3/BE185D?text=Después'">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-600/70 to-transparent">
+                                        <span class="block text-white text-xs font-bold text-center py-2">DESPUÉS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gradient-to-b from-white to-slate-50">
+                        <p class="text-sm font-medium text-slate-700 text-center">Callos</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal para las imágenes -->
+            <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-75 flex items-center justify-center p-4">
+                <div class="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4">
+                    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-50">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div class="p-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="relative rounded-xl overflow-hidden">
+                                <div class="aspect-[4/5]">
+                                    <img id="modalBeforeImg" src="" alt="Imagen antes del tratamiento" class="w-full h-full object-cover">
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent">
+                                    <span class="block text-white text-sm font-bold text-center py-2">ANTES</span>
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden">
+                                <div class="aspect-[4/5]">
+                                    <img id="modalAfterImg" src="" alt="Imagen después del tratamiento" class="w-full h-full object-cover">
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-600/70 to-transparent">
+                                    <span class="block text-white text-sm font-bold text-center py-2">DESPUÉS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="modalTitle" class="text-lg font-medium text-slate-700 text-center mt-4"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-12 text-center bg-white/80 shadow-xl rounded-2xl p-8">
+          <a href="tratamientos.html" class="inline-block bg-pink-600 text-white text-lg font-semibold py-4 px-10 rounded-full hover:bg-pink-700 transition-all duration-300 shadow-lg hover:shadow-pink-300 focus:outline-none focus:ring-4 focus:ring-pink-300">
+        Saber más sobre cada tratamiento
+          </a>
+        </section>
+
+        <section class="mt-16 lg:mt-24 bg-white/80 shadow-xl p-8 md:p-12 rounded-2xl">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="md:flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Conocé el Consultorio</h2>
+                        <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">Un espacio pensado para tu comodidad y bienestar. Se Utiliza instrumental esterilizado y materiales descartables para garantizar tu seguridad.</p>
+                        <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">Vení a relajarte mientras cuido la salud de tus pies. Ubicado en Garibaldi 223 ( Mutual de agua energía)</p>
+                        <a href="https://share.google/AbWQevpLa2lD6VRCF" class="group inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-pink-700 text-white text-base font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-pink-500/30 transition-all duration-300 hover:from-pink-700 hover:to-pink-800 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-white">
+                            <svg class="w-5 h-5 mr-2 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            Ver Ubicación del Consultorio
+                        </a>
+                    </div>
+                    <div class="md:w-1/2 overflow-hidden rounded-2xl shadow-xl">
+                        <img src="Imagenes/Consultorio.jpg" alt="Interior del consultorio de podología en San Nicolás" class="w-full h-full object-cover min-h-[300px] transform hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/F3F4F6/9CA3AF?text=Foto+Consultorio'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-16 lg:mt-24 bg-white/80 shadow-xl rounded-2xl p-8 md:p-12" id="sobre-mi">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden p-8 md:p-12">
+
+            <div class="flex justify-center mb-6">
+              <img src="Imagenes/Podologa Daniela .jpg" 
+                   alt="Foto de perfil de Daniela Moreira, Tec. Podóloga" 
+                   class="w-40 h-40 rounded-full object-cover border-4 border-pink-600 shadow-lg"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x400/FCE7F3/be185d?text=DM'">
+            </div>
+
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">
+                    Daniela Moreira, Técnica podóloga.
+                </h2>
+                <h3 class="text-xl font-semibold text-pink-600 text-center mb-6">
+                    Técnica Podóloga M.P 172492
+                </h3>
+                
+                <div class="text-slate-700 leading-relaxed space-y-4 text-center max-w-2xl mx-auto">
+                    <p>
+                        <strong>Estudié en la UGR (Rosario) 2014-2018. Soy mamá y ama de casa, trabajo con diferentes patologías en relación a los pies.</strong>
+                   </p>
+                   <p class="font-medium text-slate-800">
+                        Cada uno de mis pacientes recibe un cuidado y seguimiento especial para llegar a una pronta recuperación.
+                    </p>
+                   
+                     <div class="text-left inline-block">
+                        <p class="font-bold">Congresos y Capacitación:</p>
+                        <ul class="list-none pl-0">
+                           <li>👣 Primera Jornada de pie Diabético y Vásculopatías (2014) Rosario</li>
+                           <li>👣 IX Jornada Podológica Adulto Mayor (2016) Rosario</li>
+                           <li>👣 IV Congreso Argentino de Podología (2018) Rosario</li>
+                           <li>👣 XVII Congreso Latinoamericano de Podología (2022) Mar del Plata </li>
+                           <li>👣 Jornada Podológica y Expo Podo (2024) Buenos Aires</li>
+                        </ul>
+                     </div>
+                  </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-16 lg:mt-24 bg-white/80 shadow-xl rounded-2xl p-8 md:p-12" id="mi-trabajo">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">
+                Mi Trabajo en Acción
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 px-4 md:px-0">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="trabajo-img-container aspect-square" onclick="openTrabajoModal('Imagenes/Trabajando 1.jpg', 'Atención personalizada y con instrumental esterilizado')">
+                        <img src="Imagenes/Trabajando 1.jpg" alt="Daniela Moreira trabajando con instrumental esterilizado" class="trabajo-img w-full h-full object-cover" onerror="this.src='https://placehold.co/400x400/FCE7F3/BE185D?text=Trabajando+1'">
+                    </div>
+                    <p class="p-3 md:p-4 text-sm text-slate-600 text-center">Atención personalizada y con instrumental esterilizado.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="trabajo-img-container aspect-square" onclick="openTrabajoModal('Imagenes/Trabajando 2.jpg', 'Cuidado y precisión en cada detalle')">
+                        <img src="Imagenes/Trabajando 2.jpg" alt="Tratamiento de podología en detalle" class="trabajo-img w-full h-full object-cover" onerror="this.src='https://placehold.co/400x400/FCE7F3/BE185D?text=Trabajando+2'">
+                    </div>
+                    <p class="p-4 text-sm text-slate-600 text-center">Cuidado y precisión en cada detalle.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="trabajo-img-container aspect-square" onclick="openTrabajoModal('Imagenes/Trabajando 3.jpg', 'Un ambiente relajado y profesional')">
+                        <img src="Imagenes/Trabajando 3.jpg" alt="Atención podológica a un paciente" class="trabajo-img w-full h-full object-cover" onerror="this.src='https://placehold.co/400x400/FCE7F3/BE185D?text=Trabajando+3'">
+                    </div>
+                    <p class="p-4 text-sm text-slate-600 text-center">Un ambiente relajado y profesional.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para imágenes de trabajo -->
+        <div id="trabajoModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-80 flex items-center justify-center p-4" onclick="closeTrabajoModal()">
+            <div class="relative max-w-5xl w-full" onclick="event.stopPropagation()">
+                <button onclick="closeTrabajoModal()" class="absolute -top-12 right-0 text-white hover:text-pink-400 transition-colors z-50">
+                    <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <img id="trabajoModalImg" src="" alt="" class="w-full h-auto">
+                    <div class="p-6">
+                        <p id="trabajoModalText" class="text-lg text-slate-700 text-center font-medium"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="mt-16 lg:mt-24 max-w-4xl mx-auto bg-white/80 shadow-xl rounded-2xl p-8 md:p-12" id="tratamiento">
+            
+            <div class="mb-12" id="tratamientos-lista">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+                    Tratamientos Podológicos
+                </h2>
+                <p class="mb-6 text-slate-700 leading-relaxed">Me especializo en el diagnóstico y tratamiento de una amplia variedad de patologías del pie, incluyendo:</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-slate-700">
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <span>Callos o helomas </span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <span>Onicomicosis (micosis en uñas)</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <span>Onicocriptosis (uñas encarnadas)</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <span>Onicogrifosis (uñas engrosadas)</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <span>Verrugas plantares</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <span>Talones agrietados</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+                    ¿Qué se realiza en la sesión?
+                </h2>
+                <div class="space-y-6 text-slate-700 leading-relaxed">
+                    <p>Un tratamiento de podología es un proceso meticuloso diseñado para tu máximo confort y salud:</p>
+                    <ol class="list-decimal list-inside space-y-3 pl-2">
+                        <li><strong>Evaluación y Diagnóstico:</strong> Se observa detalladamente pies y uñas para identificar condiciones como callos, durezas, uñas encarnadas o pie de atleta.</li>
+                        <li><strong>Limpieza y Asepsia:</strong> Se realiza una limpieza profunda de la zona para preparar la piel y las uñas para el tratamiento.</li>
+                        <li><strong>Tratamiento Específico:</strong> Se eliminan profesionalmente callosidades y durezas. Se tratan las uñas problemáticas (corte, fresado, etc.) con instrumental esterilizado.</li>
+                        <li><strong>Hidratación y Masaje:</strong> Por ultimo se realiza una hidratación profunda y un breve masaje relajante para estimular la circulación.</li>
+                        <li><strong>Recomendaciones:</strong> Te daré consejos personalizados sobre calzado y cuidados en casa. Se recomiendan visitas de seguimiento cada 1 a 3 meses.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+                    ¿Para Quién se Recomienda?
+                </h2>
+                <p class="mb-4 text-slate-700 leading-relaxed">Este tratamiento es ideal para cualquier persona que desee mantener sus pies saludables, pero es especialmente beneficioso para:</p>
+                <ul class="list-disc list-outside ml-5 space-y-2 text-slate-700">
+                    <li><strong>Deportistas:</strong> Para prevenir lesiones y tratar el impacto constante.</li>
+                    <li><strong>Personas que usan tacos:</strong> Alivia la presión y previene la formación de durezas.</li>
+                    <li><strong>Adultos mayores:</strong> Para mantener la movilidad y prevenir complicaciones.</li>
+                    <li><strong>Pacientes con diabetes:</strong> El cuidado podológico preventivo es crucial (siempre con control médico).</li>
+                    <li><strong>Personas que pasan mucho tiempo de pie:</strong> Alivia el cansancio y previene problemas circulatorios.</li>
+                    <li><strong>(La podología no tiene edad ni género)</strong> La atención es para ambos sexos, desde niños hasta adulto mayor.</li>
+                </ul>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+                    Beneficios
+                </h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-slate-700">
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                        <span>Previene problemas y complicaciones.</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                        <span>Alivia el dolor y la incomodidad.</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                        <span>Trata eficazmente hongos y bacterias.</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                        <span>Corrige problemas de uñas.</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                        <span>Mejora la estética y la postura.</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-pink-500" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                        <span>Aporta una sensación de ligereza.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-12" id="faq">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200">
+                    Preguntas Frecuentes
+                </h2>
+                <div class="space-y-5">
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-800">¿El tratamiento es doloroso?</h4>
+                        <p class="text-slate-600 leading-relaxed mt-1">No. Los Podologos estan capacitados para trabajar con delicadeza. La eliminación de callos o el tratamiento de uñas encarnadas (sin cirugía) suelen ser indoloros y proporcionan alivio inmediato.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-800">¿Cuánto dura la sesión de podología?</h4>
+                        <p class="text-slate-600 leading-relaxed mt-1">Una sesión estándar de podología completa dura aproximadamente entre 45 y 60 minutos, dependiendo de las necesidades específicas de cada pie.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-800">¿Necesito alguna preparación previa?</h4>
+                        <p class="text-slate-600 leading-relaxed mt-1">No se requiere ninguna preparación especial. Simplemente acude con los pies limpios. Si usas esmalte de uñas, es preferible retirarlo.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5493364343460?text=Hola%20Daniela%2C%20quisiera%20solicitar%20un%20turno%20para%20podolog%C3%ADa.%20%C2%BFCu%C3%A1ndo%20tendr%C3%ADas%20disponibilidad%3F" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 mt-16 shadow-2xl rounded-t-2xl">
+        <div class="container mx-auto px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <div class="md:col-span-1">
+                    <a href="#" class="flex items-center space-x-3 text-xl md:text-2xl font-bold text-white mb-6 hover:opacity-90 transition-opacity">
+                        <img src="Imagenes/Logo Pestaña.jpg" alt="Logo Podología Daniela Moreira" class="h-16 rounded-xl shadow-lg">
+                    </a>
+                    <div class="space-y-3 mb-6">
+                        <p class="text-slate-300 text-base font-semibold flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Tec. Podóloga M.P 172492
+                        </p>
+                        <p class="text-slate-400 text-sm flex items-start">
+                            <svg class="w-5 h-5 mr-2 text-pink-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span>Garibaldi 223<br>(Mutual Agua y Energía)<br>San Nicolás</span>
+                        </p>
+                    </div>
+                    
+                    <a href="https://share.google/AbWQevpLa2lD6VRCF" class="group inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-pink-600 text-white text-sm font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-pink-500/40 transition-all duration-300 mb-8 w-full hover:from-pink-600 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-slate-900">
+                        <svg class="w-5 h-5 mr-2 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        Ver Ubicación
+                    </a>
+
+                    <div class="flex space-x-5">
+                        <a href="https://www.instagram.com/podologia_daniela_moreira" class="text-slate-400 hover:text-pink-400 transition-all duration-300 transform hover:scale-110" title="Síguenos en Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2.043A10.25 10.25 0 0 1 22.568 12.315c0 5.66-4.592 10.252-10.253 10.252S2.063 17.975 2.063 12.315A10.25 10.25 0 0 1 12.315 2.043Zm0 1.637A8.613 8.613 0 1 0 20.928 12.315a8.613 8.613 0 0 0-8.613-8.635Zm0 3.662a4.95 4.95 0 1 1 0 9.9 4.95 4.95 0 0 1 0-9.9Zm0 1.637a3.313 3.313 0 1 0 0 6.626 3.313 3.313 0 0 0 0-6.626Zm5.205-2.22A1.22 1.22 0 1 1 16.298 9.35a1.22 1.22 0 0 1 1.222-1.222Z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="https://www.facebook.com/daniela.moreira.pedicura?rdid=XEprf3tDcJzPvNpN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14QNtrUnxnc%2F#" class="text-slate-400 hover:text-pink-400 transition-all duration-300 transform hover:scale-110" title="Síguenos en Facebook" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-5 border-b border-slate-700 pb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        Navegación
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#tratamiento" class="text-slate-300 hover:text-pink-400 transition-all duration-300 flex items-center group">
+                            <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            El Tratamiento
+                        </a></li>
+                        <li><a href="#resultados" class="text-slate-300 hover:text-pink-400 transition-all duration-300 flex items-center group">
+                            <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            Resultados
+                        </a></li>
+                        <li><a href="#faq" class="text-slate-300 hover:text-pink-400 transition-all duration-300 flex items-center group">
+                            <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            Preguntas Frecuentes
+                        </a></li>
+                        <li><a href="#sobre-mi" class="text-slate-300 hover:text-pink-400 transition-all duration-300 flex items-center group">
+                            <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            Sobre Mí
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-5 border-b border-slate-700 pb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        Ayuda
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://wa.me/5493364343460?text=Hola%20Daniela%2C%20te%20contacto%20desde%20tu%20p%C3%A1gina%20web.%20Me%20gustar%C3%ADa%20consultar%20por%20un%20turno%20para%20podolog%C3%ADa." class="text-slate-300 hover:text-pink-400 transition-all duration-300 flex items-center group" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            Vía WhatsApp
+                        </a></li>
+                        <li><a href="#" class="text-slate-300 hover:text-pink-400 transition-all duration-300 flex items-center group">
+                            <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            Términos y condiciones
+                        </a></li>
+                        <li><a href="#" class="text-slate-300 hover:text-pink-400 transition-all duration-300 flex items-center group">
+                            <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            Política de privacidad
+                        </a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-sm text-slate-400">
+                        &copy; 2025 Podología Daniela Moreira. Todos los derechos reservados.
+                    </p>
+                    <div class="flex items-center space-x-2 text-slate-400 text-sm">
+                        <span>Hecho con</span>
+                        <svg class="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>en San Nicolás</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="podologia.js"></script>
+
+    
+</body>
+</html>

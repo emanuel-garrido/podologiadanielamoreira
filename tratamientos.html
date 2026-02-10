@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamientos - Podología Daniela Moreira</title>
+    
+    <meta name="description" content="Conocé en detalle los tratamientos de podología: Onicocriptosis, Onicomicosis, Verrugas plantares y más.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="Imagenes/Logo Pestaña.jpg" type="image/jpeg">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155; /* slate-700 */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        header {
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        body.scrolled header {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+
+</head>
+<body class="bg-slate-50 antialiased">
+
+   <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-4 md:px-6 py-4">
+        
+        <div class="flex justify-between items-center">
+            
+            <a href="#" class="flex items-center space-x-3 text-xl md:text-2xl font-bold text-pink-600">
+                    <img src="Imagenes/Logo.png" alt="Logo Podología Daniela Moreira" class="h-14">
+                    <span>Podología Daniela Moreira</span>
+                </a>
+
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html#sobre-mi" class="text-slate-600 hover:text-pink-600 transition-all duration-300 font-medium">Sobre Mí</a>
+                <a href="index.html#tratamiento" class="text-slate-600 hover:text-pink-600 transition-all duration-300 font-medium">El Tratamiento</a>
+                <a href="index.html#resultados" class="text-slate-600 hover:text-pink-600 transition-all duration-300 font-medium">Resultados</a>
+                <a href="index.html#faq" class="text-slate-600 hover:text-pink-600 transition-all duration-300 font-medium">Preguntas Frecuentes</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                
+                <a href="https://wa.me/5493364343460?text=Hola%20Daniela%2C%20te%20contacto%20desde%20tu%20p%C3%A1gina%20web.%20Me%20gustar%C3%ADa%20consultar%20por%20un%20turno%20para%20podolog%C3%ADa." class="hidden sm:flex items-center bg-green-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-green-600 transition-all duration-300 shadow-md">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19.11 4.9C17.22 3 14.71 2 12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.45 1.27 4.96L2 22l5.05-1.34c1.47.75 3.09 1.2 4.8 1.2h.01c5.52 0 10-4.48 10-10c0-2.71-1-5.22-2.9-7.1zM12 20.38c-1.6 0-3.13-.5-4.42-1.39L4.44 20l1.03-3.08c-.88-1.3-1.38-2.83-1.38-4.42c0-4.41 3.59-8 8-8c2.21 0 4.21.87 5.66 2.34c1.45 1.45 2.34 3.45 2.34 5.66c0 4.41-3.59 8-8 8zm4.4-6.03c-.26-.13-1.56-.77-1.81-.85c-.25-.08-.43-.13-.62.13c-.19.26-.7.85-.86 1.02c-.16.17-.32.19-.58.06c-.26-.13-1.1-.4-2.09-1.28c-.78-.69-1.3-1.54-1.45-1.8c-.15-.26-.02-.4.11-.53c.12-.12.26-.32.39-.47c.13-.16.17-.26.26-.44c.09-.18.04-.33-.02-.46c-.06-.13-.62-1.49-.85-2.04c-.23-.55-.46-.48-.62-.48h-.4c-.19 0-.49.06-.74.32c-.25.26-.96.93-.96 2.25c0 1.32.99 2.6 1.13 2.78c.14.18 1.96 3 4.75 4.18c.71.3 1.25.48 1.69.62c.7.22 1.35.19 1.86.11c.56-.08 1.56-.64 1.78-1.25c.22-.61.22-1.14.16-1.25c-.06-.11-.24-.17-.5-.3z"/>
+                    </svg>
+                    <span>Pedir Turno por WhatsApp</span>
+                </a>
+                
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-600 hover:text-pink-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-3">
+            <a href="index.html#sobre-mi" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-pink-50 hover:text-pink-600 transition-all duration-300">Sobre Mí</a>
+            <a href="index.html#tratamiento" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-pink-50 hover:text-pink-600 transition-all duration-300">El Tratamiento</a>
+            <a href="index.html#resultados" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-pink-50 hover:text-pink-600 transition-all duration-300">Resultados</a>
+            <a href="index.html#faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-pink-50 hover:text-pink-600 transition-all duration-300">Preguntas Frecuentes</a>
+            <a href="https://wa.me/5493364343460?text=Hola%20Daniela%2C%20te%20contacto%20desde%20tu%20p%C3%A1gina%20web.%20Me%20gustar%C3%ADa%20consultar%20por%20un%20turno%20para%20podolog%C3%ADa." class="block w-full text-center bg-green-500 text-white font-semibold py-3 px-4 rounded-lg hover:bg-green-600 transition-all duration-300 shadow-md">
+                Pedir Turno por WhatsApp
+            </a>
+        </div>
+
+    </nav>
+</header>
+
+    <main class="container mx-auto px-4 md:px-6 py-12 md:py-16">
+
+        <section class="max-w-3xl mx-auto">
+            
+            <div class="mb-8">
+                <a href="index.html" class="text-slate-600 hover:text-pink-600 transition-all duration-300 font-medium flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Volver a la página principal
+                </a>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+                Glosario de Tratamientos
+            </h1>
+            <p class="text-lg text-slate-600 leading-relaxed mb-12">
+                Acá encontras las patologías más comunes que se realizan en el consultorio.
+            </p>
+
+            <div class="space-y-8">
+
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-pink-600">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Callos o Helomas</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Es el endurecimiento y engrosamiento de la piel (hiperqueratosis) causado por fricción o presión repetitiva, generalmente por el calzado. Los helomas, conocidos como "ojos de gallo", son callos más profundos, focalizados y pueden ser muy dolorosos.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-pink-600">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Hiperqueratosis</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Engrosamiento de la capa externa de la piel, causado por una producción excesiva de queratina.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-pink-600">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Onicomicosis (Micosis en uñas)</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Se trata de una infección causada por hongos (micosis) que afecta a las uñas. Provoca cambios notables como decoloración (tonos amarillos, marrones o blancos), engrosamiento, fragilidad y deformación de la lámina ungueal.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-pink-600">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Onicocriptosis (Uñas encarnadas)</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Comúnmente conocida como "uña encarnada". Es una condición dolorosa que ocurre cuando uno de los bordes de la uña se clava en la piel del dedo. Esto puede causar inflamación, enrojecimiento y, en algunos casos, infección.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-pink-600">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Onicogrifosis (Uñas engrosadas)</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Es un engrosamiento y curvatura excesiva de las uñas, dándoles un aspecto similar a una "garra". Es más común en adultos mayores o como resultado de traumatismos repetidos en la uña. Dificulta el corte y el uso de calzado.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-pink-600">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Verrugas Plantares</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Son lesiones cutáneas benignas causadas por el Virus del Papiloma Humano (VPH) que aparecen en la planta del pie. A menudo se confunden con callos, pero son conocidas popularmente como "ojos de pescado" y pueden ser dolorosas al caminar.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-pink-600">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Talones Agrietados</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Son fisuras o grietas que aparecen en la piel de los talones, generalmente causadas por una resequedad extrema (xerosis) combinada con la presión al caminar. Si no se tratan, pueden profundizarse, volverse muy dolorosas e incluso sangrar.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 mt-16">
+        <div class="container mx-auto px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="md:col-span-1">
+                    <a href="index.html" class="flex items-center space-x-3 text-xl md:text-2xl font-bold text-white mb-4">
+                        <img src="Imagenes/Logo Pestaña.jpg" alt="Logo Podología Daniela Moreira" class="h-14">
+                    </a>
+                    <p class="text-slate-400 text-sm mb-2">Tec. Podóloga M.P 172492</p>
+                    <p class="text-slate-400 text-sm mb-6">Consultorio particular: Garibaldi 223</p>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/podologia_daniela_moreira" class="text-slate-400 hover:text-pink-400 transition-all duration-300" title="Instagram">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2.043A10.25 10.25 0 0 1 22.568 12.315c0 5.66-4.592 10.252-10.253 10.252S2.063 17.975 2.063 12.315A10.25 10.25 0 0 1 12.315 2.043Zm0 1.637A8.613 8.613 0 1 0 20.928 12.315a8.613 8.613 0 0 0-8.613-8.635Zm0 3.662a4.95 4.95 0 1 1 0 9.9 4.95 4.95 0 0 1 0-9.9Zm0 1.637a3.313 3.313 0 1 0 0 6.626 3.313 3.313 0 0 0 0-6.626Zm5.205-2.22A1.22 1.22 0 1 1 16.298 9.35a1.22 1.22 0 0 1 1.222-1.222Z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="https://www.facebook.com/daniela.moreira.pedicura?rdid=XEprf3tDcJzPvNpN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14QNtrUnxnc%2F#" class="text-slate-400 hover:text-pink-400 transition-all duration-300" title="Facebook">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Navegación</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html#sobre-mi" class="text-slate-400 hover:text-white transition-all duration-300">Sobre Mí</a></li>
+                        <li><a href="index.html#tratamiento" class="text-slate-400 hover:text-white transition-all duration-300">El Tratamiento</a></li>
+                        <li><a href="index.html#resultados" class="text-slate-400 hover:text-white transition-all duration-300">Resultados</a></li>
+                        <li><a href="index.html#faq" class="text-slate-400 hover:text-white transition-all duration-300">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Ayuda</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://wa.me/5493364343460?text=Hola%20Daniela%2C%20te%20contacto%20desde%20tu%20p%C3%A1gina%20web.%20Me%20gustar%C3%ADa%20consultar%20por%20un%20turno%20para%20podolog%C3%ADa." class="text-slate-400 hover:text-white transition-all duration-300">Vía WhatsApp</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-all duration-300">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-all duration-300">Política de privacidad</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-700 mt-12 pt-8 text-center">
+                <p class="text-sm text-slate-500">
+                    &copy; Podología Daniela Moreira 2025. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Lógica simple para el menú móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Efecto de scroll en el header
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
